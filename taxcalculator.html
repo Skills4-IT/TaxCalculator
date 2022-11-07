@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tax calculator</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tax calculator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calculate Taxes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Demo</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ======= Hero Section ======= -->
+    <main id="hero">
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://www.dropbox.com/s/25lk5ur2qvxms7o/AppLandingPage.png?raw=1"
+                        class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
+                        loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Tax calculator</h1>
+                    <p class="lead"> Add or extract Text: calculate net amount without Tax in few keystrokes. <br>
+                        Just type the gross value and press enter button to see VAT percentage.
+                    </p>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <input type="text" name="nameAmount" id="amount" class="form-control" placeholder="Enter amount">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="radio" value="0" name="typeOfTax" id="myRadio"
+                        aria-label="Radio button for following text input"> Include Tax
+                </div>
+
+
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="radio" value="1" name="typeOfTax" id="myRadio2"
+                        aria-label="Radio button for following text input"> Exclude Tax
+                </div>
+                <br>
+
+
+                <input type="number" step=0.01 name="percentageTax" id="percentageTax" class="form-control"
+                    placeholder="Enter amount" min="20.99" max="100">
+                <span class="input-group-text">%</span>
+
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"
+                    onclick="CalculateTax()">Calculate</button>
+                <p id="result">
+                    Total result:
+
+                </p>
+            </div>
+        </div>
+
+
+        </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
